@@ -1,0 +1,16 @@
+.section-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+.active {
+  opacity: 1;
+  height: 100%;
+  display: block;
+}
