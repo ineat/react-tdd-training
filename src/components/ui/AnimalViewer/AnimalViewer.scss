@@ -6,6 +6,7 @@
   .animal-details {
     display: flex;
     width: 50%;
+    max-width: 450px;
     flex-direction: column;
 
     .picture, .description {
@@ -30,6 +31,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.5s;
+    outline: none;
 
     &:hover {
       background-color: lightseagreen;
