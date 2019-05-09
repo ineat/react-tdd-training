@@ -1,15 +1,13 @@
 import * as React from 'react';
 
-import myDogPicture from '../../../assets/images/my-dog.JPG';
-
 import './AnimalViewer.scss';
 
-export default () => (
+export default ({ img, description, onReloadImage }) => (
   <div className="animal-viewer">
     <div className="animal-details">
-      <img src={myDogPicture} className="picture" alt="Moohhh"/>
-      <div className="description">Border collies are bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</div>
+      <img src={img} className="picture" alt="Moohhh"/>
+      <div className="description">{description || 'No description'}</div>
     </div>
-    <button>I want another one !</button>
+    <button className="reload-button" onClick={onReloadImage}>I want another one !</button>
   </div>
 );

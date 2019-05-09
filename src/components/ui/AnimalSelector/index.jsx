@@ -1,23 +1,14 @@
 import * as React from 'react';
 
+import Animal from '../Animal';
 import dogLogo from '../../../assets/images/dog.png';
 import catLogo from '../../../assets/images/cat.png';
 
 import './AnimalSelector.scss';
 
-export default () => (
+export default ({ onSelectAnimal }) => (
   <div className="animal-selector">
-    <div className="animal-container">
-      <img className="animal" src={catLogo} alt="Meow!" />
-      <span className="description">
-        I love cats
-      </span>
-    </div>
-    <div className="animal-container">
-      <img className="animal" src={dogLogo} alt="Wouf!" />
-      <span className="description">
-        I love dogs
-      </span>
-    </div>
+    <Animal image={catLogo} alt="Meow!" description="I love cats" onSelectAnimal={() => onSelectAnimal('cat')}/>
+    <Animal image={dogLogo} alt="Wouf!" description="I love dogs" onSelectAnimal={() => onSelectAnimal('dog')}/>
   </div>
 );
