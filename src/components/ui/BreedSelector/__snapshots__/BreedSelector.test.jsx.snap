@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breed selector Should render. 1`] = `
+<_default
+  breeds={
+    Array [
+      Object {
+        "id": "id-99",
+        "name": "Rex",
+      },
+      Object {
+        "id": "id-66",
+        "name": "Arg",
+      },
+    ]
+  }
+>
+  <div
+    className="breed-selector"
+  >
+    <div
+      className="breed"
+      key="id-99"
+      onClick={[Function]}
+    >
+      Rex
+    </div>
+    <div
+      className="breed"
+      key="id-66"
+      onClick={[Function]}
+    >
+      Arg
+    </div>
+  </div>
+</_default>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Animal viewer Should render. 1`] = `
+<_default
+  description="Nice animal"
+  img="my-dog.jpg"
+  onReloadImage={[MockFunction]}
+>
+  <div
+    className="animal-viewer"
+  >
+    <div
+      className="animal-details"
+    >
+      <img
+        alt="Moohhh"
+        className="picture"
+        src="my-dog.jpg"
+      />
+      <div
+        className="description"
+      >
+        Nice animal
+      </div>
+    </div>
+    <button
+      className="reload-button"
+      onClick={[MockFunction]}
+    >
+      I want another one !
+    </button>
+  </div>
+</_default>
+`;

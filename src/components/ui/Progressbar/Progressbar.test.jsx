@@ -13,28 +13,28 @@ describe('Progressbar', () => {
 
     const steps = wrapper.find('.step-indicator');
 
-    expect(steps.get(0).props.className).toEqual('step-indicator active');
-    expect(steps.get(1).props.className).toEqual('step-indicator');
-    expect(steps.get(2).props.className).toEqual('step-indicator');
+    expect(steps.at(0).hasClass('active')).toEqual(true);
+    expect(steps.at(1).hasClass('active')).toEqual(false);
+    expect(steps.at(2).hasClass('active')).toEqual(false);
   });
 
   it('Should highlight the second step when the given active step index is 2.', () => {
-    const wrapper = shallow(<Progressbar  activeStepIndex={2}/>);
+    const wrapper = shallow(<Progressbar activeStepIndex={2}/>);
 
     const steps = wrapper.find('.step-indicator');
 
-    expect(steps.get(0).props.className).toEqual('step-indicator');
-    expect(steps.get(1).props.className).toEqual('step-indicator active');
-    expect(steps.get(2).props.className).toEqual('step-indicator');
+    expect(steps.at(0).hasClass('active')).toEqual(false);
+    expect(steps.at(1).hasClass('active')).toEqual(true);
+    expect(steps.at(2).hasClass('active')).toEqual(false);
   });
 
   it('Should highlight the third step when the given active step index is 3.', () => {
-    const wrapper = shallow(<Progressbar  activeStepIndex={3}/>);
+    const wrapper = shallow(<Progressbar activeStepIndex={3}/>);
 
     const steps = wrapper.find('.step-indicator');
 
-    expect(steps.get(0).props.className).toEqual('step-indicator');
-    expect(steps.get(1).props.className).toEqual('step-indicator');
-    expect(steps.get(2).props.className).toEqual('step-indicator active');
+    expect(steps.at(0).hasClass('active')).toEqual(false);
+    expect(steps.at(1).hasClass('active')).toEqual(false);
+    expect(steps.at(2).hasClass('active')).toEqual(true);
   });
 });

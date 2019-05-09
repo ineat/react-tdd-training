@@ -6,7 +6,7 @@ import Animal from '.';
 describe('Animal', () => {
   const onSelectAnimalMock = jest.fn();
   const props = {
-    img: 'dat image',
+    image: 'dat image',
     alt: 'Arg arg!',
     description: 'I love dat',
     onSelectAnimal: () => onSelectAnimalMock('Arg')
@@ -16,11 +16,30 @@ describe('Animal', () => {
     expect(mount(<Animal {...props} />)).toMatchSnapshot();
   });
 
-  it('Should call "onSelectAnimal" when clicking on it.', () => {
-    const wrapper = shallow(<Animal {...props} />);
+  describe('Check props', () => {
+    let wrapper;
 
-    wrapper.find('.animal').simulate('click');
+    beforeEach(() => {
+      wrapper = shallow(<Animal {...props} />);
+    });
 
-    expect(onSelectAnimalMock).toHaveBeenCalled();
+    it('Should call "onSelectAnimal" when clicking on it.', () => {
+      wrapper.find('.animal').simulate('click');
+
+      expect(onSelectAnimalMock).toHaveBeenCalled();
+    });
+
+    it('Should display the description.', () => {
+      const text = wrapper.find('.description').text();
+
+      expect(text).toEqual(props.description);
+    });
+
+    it('Should display the image by using given image and given alt text.', () => {
+      const { src, alt } = wrapper.find('.animal').props();
+
+      expect(src).toEqual(props.image);
+      expect(alt).toEqual(props.alt);
+    });
   });
 });

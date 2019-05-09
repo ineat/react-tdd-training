@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Animal selector Should render. 1`] = `
+<_default
+  onSelectAnimal={[MockFunction]}
+>
+  <div
+    className="animal-selector"
+  >
+    <_default
+      alt="Meow!"
+      description="I love cats"
+      image="cat.png"
+      onSelectAnimal={[Function]}
+    >
+      <div
+        className="animal-container"
+      >
+        <img
+          alt="Meow!"
+          className="animal"
+          onClick={[Function]}
+          src="cat.png"
+        />
+        <span
+          className="description"
+        >
+          I love cats
+        </span>
+      </div>
+    </_default>
+    <_default
+      alt="Wouf!"
+      description="I love dogs"
+      image="dog.png"
+      onSelectAnimal={[Function]}
+    >
+      <div
+        className="animal-container"
+      >
+        <img
+          alt="Wouf!"
+          className="animal"
+          onClick={[Function]}
+          src="dog.png"
+        />
+        <span
+          className="description"
+        >
+          I love dogs
+        </span>
+      </div>
+    </_default>
+  </div>
+</_default>
+`;

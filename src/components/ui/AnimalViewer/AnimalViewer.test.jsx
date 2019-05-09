@@ -8,15 +8,16 @@ describe('Animal viewer', () => {
     img: 'my-dog.jpg',
     description: 'Nice animal',
     onReloadImage: jest.fn()
-  }
+  };
+
   it('Should render.', () => {
-    expect(mount(<AnimalViewer { ...defaultProps } />));
+    expect(mount(<AnimalViewer { ...defaultProps } />)).toMatchSnapshot();
   });
 
   it('Should call "onReloadImage" prop when clicking on button.', () => {
     const wrapper = shallow(<AnimalViewer { ...defaultProps } />);
 
-    wrapper.find('.reload-button').prop('onClick')();
+    wrapper.find('.reload-button').simulate('click');
 
     expect(defaultProps.onReloadImage).toHaveBeenCalled();
   });
