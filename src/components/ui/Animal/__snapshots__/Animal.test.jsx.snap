@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Animal Should render. 1`] = `
+<_default
+  alt="Arg arg!"
+  description="I love dat"
+  img="dat image"
+  onSelectAnimal={[Function]}
+>
+  <div
+    className="animal-container"
+  >
+    <img
+      alt="Arg arg!"
+      className="animal"
+      onClick={[Function]}
+    />
+    <span
+      className="description"
+    >
+      I love dat
+    </span>
+  </div>
+</_default>
+`;

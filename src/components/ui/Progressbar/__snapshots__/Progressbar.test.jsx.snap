@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progressbar Should render. 1`] = `
+<_default
+  activeStepIndex={1}
+>
+  <ul
+    id="progressbar"
+  >
+    <li
+      className="step-indicator active"
+      key="1"
+    >
+      Animal
+    </li>
+    <li
+      className="step-indicator"
+      key="2"
+    >
+      Breed
+    </li>
+    <li
+      className="step-indicator"
+      key="3"
+    >
+      Picture
+    </li>
+  </ul>
+</_default>
+`;
